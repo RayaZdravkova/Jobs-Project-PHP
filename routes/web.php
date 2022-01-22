@@ -14,8 +14,6 @@ use App\Http\Controllers\JobController;
 |
 */
 
-Route::get('/', function () {
-    return view('layouts.app');
-});
+Route::get('/', [JobController::class, 'jobs']);
 
-Route::get('/job', [JobController::class, 'jobs']);
+Route::get('/job/{id}',[JobController:: class, 'show' ])->name('show');

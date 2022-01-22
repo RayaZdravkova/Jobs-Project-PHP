@@ -9,6 +9,14 @@ class JobController extends Controller
 {
     public function jobs(){
         $jobs = Job::all();
-        return view('index.job');
+        return view('index.job', [
+            'jobs'=>$jobs
+        ]);
+    }
+
+    public function show($id)
+    {
+        $job=Job::find($id);
+        return view('index.viewjob', ['job' => $job]);
     }
 }

@@ -46,6 +46,11 @@ class JobCrudController extends CrudController
                 'entity' => 'companies',
                 'model'  => 'App\Models\Company',
                 'attribute' => 'name', 
+            ],
+            [
+                'label' => 'Description',
+                'type'  => 'ckeditor',
+                'name'  => 'description', 
             ]
         ];
 
