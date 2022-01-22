@@ -2,6 +2,8 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\JobController;
+use App\Http\Controllers\CityController;
+use App\Http\Controllers\CompanyController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,3 +19,5 @@ use App\Http\Controllers\JobController;
 Route::get('/', [JobController::class, 'jobs']);
 
 Route::get('/job/{id}',[JobController:: class, 'show' ])->name('show');
+Route::get('/cities',[CityController:: class, 'allcities' ])->name('cities');
+Route::get('/companies',[CompanyController:: class, 'allcompanies' ])->name('companies');
