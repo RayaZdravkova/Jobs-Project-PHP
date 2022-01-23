@@ -1,12 +1,42 @@
 @extends('layouts.multi')
 @section('content')
-<div class="inner">
-	<h1>Generic Page</h1>
-    <div class="table-wrapper">
+<html>
+<head>
+<style>
+#customers {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+#customers td, #customers th {
+  border: 1px solid #ddd;
+  padding: 8px;
+}
+
+#customers tr:nth-child(even){background-color: #f2f2f2;}
+
+#customers tr:hover {background-color: #ddd;}
+
+#customers th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #04AA6D;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="inner" id="customers">
+	<h1 style="color:crimson">Компании</h1>
+    <h3 style="text-align:centre; color: lightseagreen;">Тук ще намериш компаниите, предлагащи работа както и малко повече информация за тях</h3>
+    <div class="table-wrapper" style="border: 3px solid lightseagreen;">
 										<table class="alt">
 											<thead>
 												<tr>
-													<th>Name</th>
+													<th>Име</th>
                                                     <th>Описание</th>
 												</tr>
 											</thead>

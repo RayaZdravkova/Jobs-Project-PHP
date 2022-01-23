@@ -1,12 +1,12 @@
 @extends('layouts.multi')
 @section('content')
 <div class="inner">
-	<h1>Generic Page</h1>
+	<h1 style="color:crimson">Градове</h1>
     <div class="table-wrapper">
 										<table class="alt">
 											<thead>
 												<tr>
-													<th>Name</th>
+													<th>Град</th>
 												</tr>
 											</thead>
 											<tbody>
