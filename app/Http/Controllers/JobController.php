@@ -19,4 +19,20 @@ class JobController extends Controller
         $job=Job::find($id);
         return view('index.viewjob', ['job' => $job]);
     }
+
+    public function job(Request $request)
+    {
+        $jobs = Job::where([
+                ['name', '!=', Null],
+                [function ($query) use ($request) {
+                    if(($term = $request->term)) {
+                        $query->orWhere('name', 'LIKE', '%' . $term . '%')->get();
+                    }
+                }]
+            ])
+            ->orderBy("id", "desc")
+            ->paginate(10);
+            return view('index.job', compact('jobs'))
+            ->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 }

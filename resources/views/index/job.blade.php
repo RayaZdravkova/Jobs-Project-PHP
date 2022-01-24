@@ -3,8 +3,25 @@
 <div class="inner">
 		<header style="text-align:center;">
 			<h1>Намери работа бързо и лесно с нашият сайт!<br />
-				template designed by <a href="http://html5up.net">HTML5 UP</a>.</h1>
-			   <p>Etiam quis viverra lorem, in semper lorem. Sed nisl arcu euismod sit amet nisi euismod sed cursus arcu elementum ipsum arcu vivamus quis venenatis orci lorem ipsum et magna feugiat veroeros aliquam. Lorem ipsum dolor sit amet nullam dolore.</p>
+            <div>
+        <div class="mx-auto pull-right">
+            <div class="">
+                <form action="http://jobs-php.com/" method="GET" role="search">
+
+                    <div class="input-group">
+                        <span class="input-group-btn mr-5 mt-1">
+                            <button class="btn btn-info" style="width:20px; height:20px;" type="submit" title="Search projects">
+                                <span class="fas fa-search"></span>
+                            </button>
+                        </span>
+                        <input type="text" class="form-control mr-2" name="term" placeholder="Search projects" id="term">
+                      
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+				
 		</header>
 	<section class="tiles">
          @foreach($jobs as $job)
