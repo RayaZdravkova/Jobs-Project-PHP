@@ -2,14 +2,14 @@
 @section('content')
 <div class="inner">
 		<header style="text-align:center;">
-			<h1>Намери работа бързо и лесно с нашият сайт!</h1>
+			<h1 style="text-align:centre; color: lightseagreen;">Намери работа бързо и лесно с нашият сайт!</h1>
             <br>
             <div>
             <div class="form-group">
         <form action="{{ route('job') }}" method="GET" role="search">
         <input type="text" class="form-control mr-2" name="term" placeholder="Търси работа" id="term">
             <div style="margin:15px 10px 0px">
-                <button class="button primary icon solid fa-search" style=" border-radius: 6px;font-size: 0.5em;font-weight: 100;height:3em;letter-spacing: 0.25em;line-height: 1em;padding: 0 1.1em 0 1em;" type="submit" title="Търси работа">
+                <button class="button success icon solid fa-search" style=" border-radius: 6px;font-size: 0.5em;font-weight: 100;height:3em;letter-spacing: 0.25em;line-height: 1em;padding: 0 1.1em 0 1em;" type="submit" title="Търси работа">
                     <span class="">Търси</span>
                 </button>
                 <a href="{{ route('job') }}"></a>
