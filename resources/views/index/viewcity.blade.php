@@ -31,6 +31,7 @@
 
 <div class="inner" id="customers">
 	<h1 style="color:crimson">Градове</h1>
+    <br>
     <div class="table-wrapper" style="border: 3px solid lightseagreen;">
 										<table class="alt">
 											<thead>

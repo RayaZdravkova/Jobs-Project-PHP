@@ -32,6 +32,7 @@
 <div class="inner" id="customers">
 	<h1 style="color:crimson">Компании</h1>
     <h3 style="text-align:centre; color: lightseagreen;">Тук ще намериш компаниите, предлагащи работа както и малко повече информация за тях</h3>
+    <br>
     <div class="table-wrapper" style="border: 3px solid lightseagreen;">
 										<table class="alt">
 											<thead>
