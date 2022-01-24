@@ -16,7 +16,7 @@ use App\Http\Controllers\CompanyController;
 |
 */
 
-Route::get('/', [JobController::class, 'jobs']);
+Route::get('/', [JobController::class, 'jobs'])->name('job');
 
 Route::get('/job/{id}',[JobController:: class, 'show' ])->name('show');
 Route::get('/cities',[CityController:: class, 'allcities' ])->name('cities');

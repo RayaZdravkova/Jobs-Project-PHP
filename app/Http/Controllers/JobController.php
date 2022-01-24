@@ -7,26 +7,14 @@ use App\Models\Job;
 
 class JobController extends Controller
 {
-    public function jobs(){
-        $jobs = Job::all();
-        return view('index.job', [
-            'jobs'=>$jobs
-        ]);
-    }
 
-    public function show($id)
-    {
-        $job=Job::find($id);
-        return view('index.viewjob', ['job' => $job]);
-    }
-
-    public function job(Request $request)
+    public function jobs(Request $request)
     {
         $jobs = Job::where([
-                ['name', '!=', Null],
+                ['position', '!=', Null],
                 [function ($query) use ($request) {
                     if(($term = $request->term)) {
-                        $query->orWhere('name', 'LIKE', '%' . $term . '%')->get();
+                        $query->orWhere('position', 'LIKE', '%' . $term . '%')->get();
                     }
                 }]
             ])
@@ -35,4 +23,12 @@ class JobController extends Controller
             return view('index.job', compact('jobs'))
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
+
+    public function show($id)
+    {
+        $job=Job::find($id);
+        return view('index.viewjob', ['job' => $job]);
+    }
+
+  
 }

@@ -4,22 +4,22 @@
 		<header style="text-align:center;">
 			<h1>Намери работа бързо и лесно с нашият сайт!<br />
             <div>
-        <div class="mx-auto pull-right">
-            <div class="">
-                <form action="http://jobs-php.com/" method="GET" role="search">
-
-                    <div class="input-group">
-                        <span class="input-group-btn mr-5 mt-1">
-                            <button class="btn btn-info" style="width:20px; height:20px;" type="submit" title="Search projects">
-                                <span class="fas fa-search"></span>
-                            </button>
-                        </span>
-                        <input type="text" class="form-control mr-2" name="term" placeholder="Search projects" id="term">
-                      
-                    </div>
-                </form>
+            <div class="form-group">
+        <h2 style="margin-bottom: 10px; margin-left:10px">Search</h2>
+        <form action="{{ route('job') }}" method="GET" role="search">
+        <input type="text" class="form-control mr-2" name="term" placeholder="Търси работа" id="term">
+            <div style="margin:15px 10px 0px">
+                <button class="button primary icon solid fa-search" type="submit" title="Търси работа">
+                    <span class="">Търси</span>
+                </button>
+                <a href="{{ route('job') }}"></a>
+                    <button class="button icon solid fa-sync-alt" type="submit" title="Refresh page" style="margin-left:10px">
+                        <span class="">Презареждане</span>
+                    </button>
+                </a>
             </div>
-        </div>
+        </form>
+    </div>
     </div>
 				
 		</header>
